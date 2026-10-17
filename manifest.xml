@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<OfficeApp
+  xmlns="http://schemas.microsoft.com/office/appforoffice/1.1"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xmlns:bt="http://schemas.microsoft.com/office/officeappbasictypes/1.0"
+  xmlns:ov="http://schemas.microsoft.com/office/taskpaneappversionoverrides"
+  xsi:type="TaskPaneApp">
+
+  <Id>7c1f3a52-9d4b-4e8a-b6f1-2a5d8c0e9b13</Id>
+  <Version>1.0.0.0</Version>
+  <ProviderName>Mr2OKAMA</ProviderName>
+  <DefaultLocale>ja-JP</DefaultLocale>
+  <DisplayName DefaultValue="日付付き番号出力"/>
+  <Description DefaultValue="設定した数字とyymmddを選択セルに出力します"/>
+  <IconUrl DefaultValue="https://mr2okama.github.io/excel-date-addin/assets/icon-32.png"/>
+  <HighResolutionIconUrl DefaultValue="https://mr2okama.github.io/excel-date-addin/assets/icon-64.png"/>
+  <SupportUrl DefaultValue="https://github.com/Mr2OKAMA/excel-date-addin"/>
+
+  <AppDomains>
+    <AppDomain>https://mr2okama.github.io</AppDomain>
+  </AppDomains>
+
+  <Hosts>
+    <Host Name="Workbook"/>
+  </Hosts>
+
+  <DefaultSettings>
+    <SourceLocation DefaultValue="https://mr2okama.github.io/excel-date-addin/taskpane.html"/>
+  </DefaultSettings>
+
+  <Permissions>ReadWriteDocument</Permissions>
+
+  <VersionOverrides xmlns="http://schemas.microsoft.com/office/taskpaneappversionoverrides" xsi:type="VersionOverridesV1_0">
+    <Hosts>
+      <Host xsi:type="Workbook">
+        <DesktopFormFactor>
+          <GetStarted>
+            <Title resid="Title"/>
+            <Description resid="Desc"/>
+            <LearnMoreUrl resid="Url"/>
+          </GetStarted>
+          <ExtensionPoint xsi:type="PrimaryCommandSurface">
+            <OfficeTab id="TabHome">
+              <Group id="Group1">
+                <Label resid="GroupLabel"/>
+                <Icon>
+                  <bt:Image size="16" resid="Icon16"/>
+                  <bt:Image size="32" resid="Icon32"/>
+                  <bt:Image size="80" resid="Icon80"/>
+                </Icon>
+                <Control xsi:type="Button" id="OpenPane">
+                  <Label resid="ButtonLabel"/>
+                  <Supertip>
+                    <Title resid="ButtonLabel"/>
+                    <Description resid="Desc"/>
+                  </Supertip>
+                  <Icon>
+                    <bt:Image size="16" resid="Icon16"/>
+                    <bt:Image size="32" resid="Icon32"/>
+                    <bt:Image size="80" resid="Icon80"/>
+                  </Icon>
+                  <Action xsi:type="ShowTaskpane">
+                    <TaskpaneId>Pane1</TaskpaneId>
+                    <SourceLocation resid="PaneUrl"/>
+                  </Action>
+                </Control>
+              </Group>
+            </OfficeTab>
+          </ExtensionPoint>
+        </DesktopFormFactor>
+      </Host>
+    </Hosts>
+    <Resources>
+      <bt:Images>
+        <bt:Image id="Icon16" DefaultValue="https://mr2okama.github.io/excel-date-addin/assets/icon-16.png"/>
+        <bt:Image id="Icon32" DefaultValue="https://mr2okama.github.io/excel-date-addin/assets/icon-32.png"/>
+        <bt:Image id="Icon80" DefaultValue="https://mr2okama.github.io/excel-date-addin/assets/icon-80.png"/>
+      </bt:Images>
+      <bt:Urls>
+        <bt:Url id="PaneUrl" DefaultValue="https://mr2okama.github.io/excel-date-addin/taskpane.html"/>
+        <bt:Url id="Url" DefaultValue="https://github.com/Mr2OKAMA/excel-date-addin"/>
+      </bt:Urls>
+      <bt:ShortStrings>
+        <bt:String id="Title" DefaultValue="日付付き番号出力"/>
+        <bt:String id="GroupLabel" DefaultValue="日付付き番号"/>
+        <bt:String id="ButtonLabel" DefaultValue="番号出力"/>
+      </bt:ShortStrings>
+      <bt:LongStrings>
+        <bt:String id="Desc" DefaultValue="設定した数字とyymmddを選択セルに出力します"/>
+      </bt:LongStrings>
+    </Resources>
+  </VersionOverrides>
+</OfficeApp>
