@@ -17,14 +17,13 @@
 | `manifest.xml` | アドインのマニフェスト |
 | `taskpane.html` | タスクペインのUI |
 | `taskpane.js` | 設定保存と出力のロジック |
-| `assets/` | アイコン(`icon-16.png` / `icon-32.png` / `icon-64.png` / `icon-80.png`)※要追加 |
+| `assets/` | 緑のカレンダーに「17」を描いた背景透過アイコン(`icon-16.png` / `icon-32.png` / `icon-64.png` / `icon-80.png`) |
 
 ## セットアップ
 
-1. **アイコンを追加**: `assets/` フォルダに上記のPNGを配置します。
-2. **GitHub Pages を有効化**: `Settings` → `Pages` → Source を `Deploy from a branch`、Branch を `main` / `(root)` にします。
-3. 公開URL `https://mr2okama.github.io/excel-date-addin/` で `taskpane.html` が開けることを確認します。
-4. 別のURLで公開する場合は、`manifest.xml` 内のURLをすべて置換してください。
+1. **GitHub Pages を有効化**: `Settings` → `Pages` → Source を `Deploy from a branch`、Branch を `main` / `(root)` にします。
+2. 公開URL `https://mr2okama.github.io/excel-date-addin/` で `taskpane.html` が開けることを確認します。
+3. 別のURLで公開する場合は、`manifest.xml` 内のURLをすべて置換してください。
 
 ## Excel への読み込み(サイドロード)
 
